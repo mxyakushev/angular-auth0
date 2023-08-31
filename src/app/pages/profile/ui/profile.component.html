@@ -1,0 +1,5 @@
+<div class="profile-page" *ngIf="auth.user$ | async as user">
+  <p>{{ user.email }}</p>
+  <p>{{ user.name }}</p>
+  <img src="{{user.picture}}" alt="user img">
+</div>

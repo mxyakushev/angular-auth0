@@ -1,0 +1,15 @@
+<header>
+  <nav class="navigation" *ngIf="auth.isAuthenticated$ | async; else logoAndLogin">
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/profile" routerLinkActive="active">Profile</a>
+  </nav>
+
+  <ng-container *ngIf="auth.isAuthenticated$ | async;">
+    <button class="btn" (click)="auth.logout()">Log out</button>
+  </ng-container>
+
+  <ng-template #logoAndLogin>
+    <h3>Logo</h3>
+    <button class="btn" (click)="auth.loginWithRedirect()">Log in</button>
+  </ng-template>
+</header>
