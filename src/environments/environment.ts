@@ -1,11 +1,11 @@
-type EnvironmentInterface = {
+type Environment = {
   production: boolean;
   appUrl: string;
   auth0domain: string;
   auth0clientId: string;
 }
 
-export const environment: EnvironmentInterface = {
+export const environment: Environment = {
   production: false,
   appUrl: 'http://localhost:4200/',
   auth0domain: 'dev-w5u028to6cpf2ozx.us.auth0.com',
